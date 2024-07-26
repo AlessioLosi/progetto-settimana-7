@@ -23,7 +23,7 @@ if (albumId) {
 
       const detailRow = document.getElementById('detail-row');
       detailRow.innerHTML = `
-        <div class="col-12 col-md-8 text-center">
+        <div class="col-12 col-md-6 text-center my-5">
             <div class="card pb-4">
               <img
                         src=${singleAlbum.imageUrl}
@@ -33,13 +33,12 @@ if (albumId) {
                     <div class="card-body text-center">
                         <h5 class="card-title">${singleAlbum.name}</h5>
                         <p class="card-text">${singleAlbum.description}</p>
-                        <p class="card-text">€${singleAlbum.brand}</p>
-                           <p class="card-text">${singleAlbum.price}</p>
-                <div class="border border-danger border-2 fit-content mx-auto p-3">
-                    <h3>TASTI ADMIN</h3>
+                        <p class="card-text">${singleAlbum.brand}</p>
+                           <p class="card-text">€${singleAlbum.price}</p>
+                <div class="border border-black border-2 fit-content mx-auto p-3 rounded">
                     <div>
-                        <a href="./amministrazione.html?eventId=${album._id}" class="btn btn-warning">MODIFICA</a>
-                        <button class="btn btn-danger" onclick="deleteEvent()">ELIMINA</button>
+                        <a href="./amministrazione.html?albumId=${singleAlbum._id}" class="btn btn-success ">MODIFICA</a>
+                        <button class="btn btn-danger" onclick="deleteAlbum()">ELIMINA</button>
                     </div>
                 </div>
             </div>
@@ -51,7 +50,7 @@ if (albumId) {
     });
 }
 
-const deleteAlbum = function (albumId) {
+const deleteAlbum = function () {
   fetch(albumURL + albumId, {
     method: 'DELETE',
     headers: {

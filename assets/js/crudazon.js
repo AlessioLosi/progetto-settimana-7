@@ -28,8 +28,8 @@ const getAlbum=function(){
                         <h5 class="card-title">${album.name}</h5>
                         <p class="card-text">${album.description}</p>
                         <p class="card-text">${album.brand}</p>
-                           <p class="card-text">${album.price}</p>
-                        <a href="./dettagli.html?eventId=${album._id}" class="btn btn-primary w-100">Vai ai dettagli</a>
+                           <p class="card-text">€${album.price}</p>
+                        <a href="./dettagli.html?albumId=${album._id}" class="btn btn-primary w-100">Vai ai dettagli</a>
                     </div>
                 </div>
             </div>

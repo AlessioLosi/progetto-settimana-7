@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then((response) => {
                 if (response.ok) {
                     alert('Sei sicuro di voler salvare?');
+                    location.assign('./crudazon.html'); 
                 } else {
                     alert('ERRORE NEL SALVATAGGIO!');
                     throw new Error('Errore');
