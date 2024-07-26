@@ -58,7 +58,8 @@ albumForm.addEventListener('submit', function (e) {
         brandValue
     )
     const methodToUse = albumId ? 'PUT' : 'POST';
-    const apiToUse = albumId ? `https://striveschool-api.herokuapp.com/api/product/${albumId}` : 'https://striveschool-api.herokuapp.com/api/product/';
+    const api='https://striveschool-api.herokuapp.com/api/product/';
+    const apiToUse = albumId ? `api${albumId}` : 'api';
 
     fetch(apiToUse, {
         method: methodToUse,
