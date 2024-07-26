@@ -17,7 +17,7 @@ const getAlbum=function(){
 
       arrayOfAlbum.forEach((album) => {
         const newAlbumCol = `
-            <div class="col">
+            <div class="col my-3">
                 <div class="card">
                     <img
                         src=${album.imageUrl}
@@ -29,7 +29,8 @@ const getAlbum=function(){
                         <p class="card-text">${album.description}</p>
                         <p class="card-text">${album.brand}</p>
                            <p class="card-text">€${album.price}</p>
-                        <a href="./dettagli.html?albumId=${album._id}" class="btn btn-primary w-100">Vai ai dettagli</a>
+                        <a href="./dettagli.html?albumId=${album._id}" class="btn btn-primary w-100">Dettagli</a>
+                         <a href="#" class="btn btn-success w-100 my-2">Compra</a>
                     </div>
                 </div>
             </div>
