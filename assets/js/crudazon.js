@@ -20,21 +20,21 @@ const getAlbum=function(){
             <div class="col">
                 <div class="card">
                     <img
-                        src=${music.imageUrl}
+                        src=${album.imageUrl}
                         class="card-img-top"
                         alt="event pic"
                     />
                     <div class="card-body text-center">
-                        <h5 class="card-title">${music.name}</h5>
-                        <p class="card-text">${music.description}</p>
-                        <p class="card-text">${music.brand}</p>
-                           <p class="card-text">${music.price}</p>
-                        <a href="./details.html?eventId=${music._id}" class="btn btn-primary w-100">Vai ai dettagli</a>
+                        <h5 class="card-title">${album.name}</h5>
+                        <p class="card-text">${album.description}</p>
+                        <p class="card-text">${album.brand}</p>
+                           <p class="card-text">${album.price}</p>
+                        <a href="./dettagli.html?eventId=${album._id}" class="btn btn-primary w-100">Vai ai dettagli</a>
                     </div>
                 </div>
             </div>
             `
-        const eventsRow = document.getElementById('album-row')
+        const albumRow = document.getElementById('album-row')
         albumRow.innerHTML = albumRow.innerHTML + newAlbumCol
       })
     })
