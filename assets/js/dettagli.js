@@ -23,8 +23,8 @@ if (albumId) {
 
       const detailRow = document.getElementById('detail-row');
       detailRow.innerHTML = `
-        <div class="col-12 col-md-6 text-center my-5">
-            <div class="card pb-4">
+        <div class="col-12 col-md-6 text-center my-5 ">
+            <div class="card pb-4 bg-body-secondary">
               <img
                         src=${singleAlbum.imageUrl}
                         class="card-img-top"
